@@ -1,0 +1,25 @@
+Declare two float variables and a function as private and show the results of this.
+Soluion:
+class Result {
+private float a;
+private float b;
+private float total;
+
+private float getdata( float val1, float val2)
+{
+a= val1;
+b= val2; 
+total = a+b;
+return total;
+}
+public void displaydata(){
+float val3 = getdata (80, 81);
+System.out.println("Sum: " +val3);
+}
+
+class Main{
+public static void main (String[]args){
+Result S = new Result();
+S.displaydata()
+}
+}
