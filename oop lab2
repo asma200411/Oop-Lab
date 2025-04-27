@@ -1,0 +1,56 @@
+Create a called Book with the following attributes:
+title (string)
+author (string)
+isbn (string)
+A method get_details() that returns a formatted string with all the book details.
+Create a called BorrowedBook that inherits from the Book class. Add the following attributes:
+borrower_name (string)
+due_date (string)
+A method get_borrow_details() that calls get_details() from the base class and adds the borrower details.
+Write a program to create an instance of BorrowedBook and display its details.
+
+Solution:
+
+class Book {
+     String title;
+     String author;
+     String isbn;
+
+    public Book(String title, String author, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
+
+    public String getDetails() {
+        return "Title: " + title + "\nAuthor: " + author + "\nISBN: " + isbn;
+    }
+}
+
+class BorrowedBook extends Book {
+     String borrowerName;
+     String dueDate;
+
+    public BorrowedBook(String title, String author, String isbn, String borrowerName, String dueDate) {
+        super(title, author, isbn); 
+        this.borrowerName = borrowerName;
+        this.dueDate = dueDate;
+    }
+
+    public String getBorrowDetails() {
+        return getDetails() + "\nBorrower Name: " + borrowerName + "\nDue Date: " + dueDate;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        BorrowedBook borrowedBook = new BorrowedBook(
+            "Discrete Mathematics and its Applications",
+            "kenneth H.Rosen",
+            "9780073383095",
+            "Asma",
+            "2025-02-20"
+        );
+
+        System.out.println(borrowedBook.getBorrowDetails());
+    }
