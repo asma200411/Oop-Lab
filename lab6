@@ -1,0 +1,46 @@
+1.
+class Person {
+    String name;
+    
+    public Person(String name) {
+        this.name = name;
+    }
+    
+    public void display() {
+        System.out.println("Name: " + name);
+    }
+}
+
+class Student extends Person {
+    int studentId;
+    
+    public Student(String name, int studentId) {
+        super(name);
+        this.studentId = studentId;
+    }
+    
+    public void study() {
+        System.out.println(name + " is studying. (Student ID: " + studentId + ")");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student("Asma", 81);
+        
+        Person person = student; 
+        
+        person.display();
+        
+        Student downcastedStudent = (Student) person;
+        
+        downcastedStudent.study();
+    }
+}
+
+
+
+
+
+2.
+
