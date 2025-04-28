@@ -1,5 +1,4 @@
-Declare two float variables and a function as private and show the results of this.
-Soluion:
+
 class Result {
 private float a;
 private float b;
