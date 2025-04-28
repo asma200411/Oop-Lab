@@ -1,15 +1,4 @@
-Create a called Book with the following attributes:
-title (string)
-author (string)
-isbn (string)
-A method get_details() that returns a formatted string with all the book details.
-Create a called BorrowedBook that inherits from the Book class. Add the following attributes:
-borrower_name (string)
-due_date (string)
-A method get_borrow_details() that calls get_details() from the base class and adds the borrower details.
-Write a program to create an instance of BorrowedBook and display its details.
 
-Solution:
 
 class Book {
      String title;
