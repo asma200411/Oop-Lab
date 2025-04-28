@@ -1,0 +1,97 @@
+1.
+class Person {
+    String name;
+    
+    public Person(String name) {
+        this.name = name;
+    }
+    
+    public void display() {
+        System.out.println("Name: " + name);
+    }
+}
+
+class Student extends Person {
+    int studentId;
+    
+    public Student(String name, int studentId) {
+        super(name);
+        this.studentId = studentId;
+    }
+    
+    public void study() {
+        System.out.println(name + " is studying. (Student ID: " + studentId + ")");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student("Asma", 81);
+        
+        Person person = student; 
+        
+        person.display();
+        
+        Student downcastedStudent = (Student) person;
+        
+        downcastedStudent.study();
+    }
+}
+
+
+
+
+
+2.
+// Flyable interface
+interface Flyable {
+    void fly();
+}
+
+// Bird class implementing Flyable
+class Bird implements Flyable {
+    public void fly() {
+        System.out.println("Bird is flying.");
+    }
+
+    void layEggs() {
+        System.out.println("Bird is laying eggs.");
+    }
+}
+
+// Airplane class implementing Flyable
+class Airplane implements Flyable {
+    public void fly() {
+        System.out.println("Airplane is flying.");
+    }
+
+    void startEngine() {
+        System.out.println("Airplane engine started.");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+
+        // Creating Bird and Airplane objects
+        Flyable[] flyingObjects = new Flyable[2];
+        flyingObjects[0] = new Bird();      // Upcasting Bird to Flyable
+        flyingObjects[1] = new Airplane();  // Upcasting Airplane to Flyable
+
+        // Iterating and calling fly()
+        for (Flyable obj : flyingObjects) {
+            obj.fly();
+
+            // Downcasting to access specific methods
+            if (obj instanceof Bird) {
+                Bird b = (Bird) obj;
+                b.layEggs();
+            } else if (obj instanceof Airplane) {
+                Airplane a = (Airplane) obj;
+                a.startEngine();
+            }
+        }
+    }
+}
+
