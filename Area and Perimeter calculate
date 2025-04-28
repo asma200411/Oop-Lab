@@ -1,20 +1,3 @@
-Details:
-Methods:
-double calculateArea() - A method to calculate the area of the shape.
-double calculatePerimeter() - A method to calculate the perimeter of the shape.
-Attributes:
-length (double) - The length of the rectangle.
-width (double) - The width of the rectangle.
-Methods:
-Rectangle(double length, double width) - Constructor to initialize the rectangle’s attributes.
-Implement the calculateArea() and calculatePerimeter() methods as per the rectangle formula.
-Attributes:
-radius (double) - The radius of the circle.
-Methods:
-Circle(double radius) - Constructor to initialize the circle’s attribute.
-Implement the calculateArea() and calculatePerimeter() methods as per the circle formula.
-
-Solution:
 
 class Rectangle {
     double length;
