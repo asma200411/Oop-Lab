@@ -1,6 +1,4 @@
-Create a class that will take input three numbers and will show pass if the total is more than 80
-
-Solution: 
+ 
 import java.util.Scanner;
 
 class Result {
